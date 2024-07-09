@@ -12,7 +12,7 @@ We refer to three spaces of note:
 
 Elements of these spaces are denoted:
 * $X \in \mathcal{M}$
-* $\xi \in \mathcal{m}$
+* $\xi \in \mathfrak{m}$
 * $x \in \mathbb{R}^m$
 
 ## Getting started
