@@ -12,38 +12,38 @@ classdef (Abstract) LieGroupBase
     methods (Abstract, Static)
         
         %HAT Map a vector in R^n to an element of the Lie algebra
-        %   $ hat(x) : R^n -> m $
+        %   $ hat(x) : \mathbb{R}^n \to \mathfrak{m} $
         xi = hat(x);
 
         %VEE Map an element of the Lie algebra to a vector in R^n
-        %   $ vee(x) : m -> R^n $
+        %   $ vee(x) : \mathfrak{m} \to \mathbb{R}^n $
         x = vee(xi);
         
         %EXP Map an element of the Lie algebra to an element of the Lie group
-        %   $ exp(x) : m -> M $
+        %   $ exp(x) : \mathfrak{m} \to \mathcal{M} $
         X = exp(xi);
 
         %LOG Map an element of the Lie group to an element of the Lie algebra
-        %   $ log(x) : M -> m $
+        %   $ log(x) : \mathcal{M} \to \mathfrak{m} $
         xi = log(X);
         
         %BIGEXP Map a vector in R^n to an element of the Lie group
-        %   $ Exp(x) : R^n -> M $
+        %   $ Exp(x) : \mathbb{R}^n \to \mathcal{M} $
         X = bigexp(x);
 
         %BIGLOG Map an element of the Lie group to a vector in R^n
-        %   $ Log(x) : M -> R^n $
+        %   $ Log(x) : \mathcal{M} \to \mathbb{R}^n $
         x = biglog(x);
 
     end
 
     methods (Abstract, Static)
         %IDENTITY Generate the identity element of the Lie group
-        %   $ identity() : -> M $
+        %   $ identity() : \to \mathcal{M} $
         I = identity();
 
         %INVERSE Generate the inverse of an element of the Lie group
-        %   $ inverse(X) : M -> M $
+        %   $ inverse(X) : \mathcal{M} \to \mathcal{M} $
         Xinv = inverse(X);
     end
 
